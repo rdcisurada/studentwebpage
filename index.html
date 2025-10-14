@@ -1,63 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dropdown Hyperlink</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD Computer Institute</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0c3c78;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #0a355a;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        select:hover {
+            border-color: #0078d7;
+        }
+
+        select:focus {
+            border-color: #0078d7;
+            box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            label {
+                font-size: 18px;
+            }
+
+            select {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+
     <script>
         function goToLink(select) {
-            const url = select.value;
+            const url = select.value.trim();
             if (url) {
-                window.location.href = url;
+                window.open(url, "_blank"); // Opens in new tab
             }
         }
     </script>
 </head>
 <body oncontextmenu="return false;">
- <h1><P align="center">RD COMPUTER INSTITUTE</P></h1>
 
-    <label for="links"><font size="5">SHORTCUT KEYS</font></label>
-    <select id="links" onchange="goToLink(this)">
-        <option value="">-- Select a site --</option>
-          <option value="https://rdcisurada.github.io/keyboardsymbols/">Keyboard symbols</option>
-        <option value="https://rdcisurada.github.io/windowsshortcut/">Windows Shortcut</option>
-        <option value="https://rdcisurada.github.io/excelshortcut/">Excel Shorcut</option>
-        <option value="https://rdcisurada.github.io/wordshortcut/">Word Shortcut</option>
-        <option value="https://rdcisurada.github.io/internet-shortcut-keys/">Internet Shortcut</option>
-        <option value="https://rdcisurada.github.io/tallyshortcut/">Tally Shorcut</option>
-        <option value="https://rdcisurada.github.io/shortname/">full form name/computer abbreviation</option>
-       
-    </select><br><br><br>
+    <h1>RD COMPUTER INSTITUTE</h1>
 
-    <label for="links"><font size="5">EXCEL DATA</font></label>
-    <select id="links" onchange="goToLink(this)">
-        <option value="">-- Select a site --</option>
-        <option value="https://rdcisurada.github.io/excelformula/">excel formula</option>
-        <option value="https://rdcisurada.github.io/vlookupdata/">Vlookup data</option>
-        <option value="https://rdcisurada.github.io/filterdata/">Filter data</option>
-         <option value=" https://rdcisurada.github.io/pivottabledata/">pivottable data</option>
-        <option value="https://rdcisurada.github.io/convertdata/">convert </option>
-        <option value=" https://rdcisurada.github.io/countif-countifsdata/">countifs data</option>
-          <option value="https://rdcisurada.github.io/sumif-sumifsdata/">sumifs data</option>
-          
-    </select><br><br><br>
+    <div class="container">
 
-  
- 
-     <label for="links"><font size="5">Online websites</font></label>
-    <select id="links" onchange="goToLink(this)">
-        <option value="">-- Select a site --</option>
-        <option value="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en">Adhar download</option>
-        <option value="https://myaadhaar.uidai.gov.in/check-aadhaar-validity/en">Mob no check in adhar</option>
-         <option value="https://tathya.uidai.gov.in/access/login?role=resident">Adhar and bank link status</option>
-        <option value="https://myaadhaar.uidai.gov.in/retrieve-eid-uid/en">forget adhar no recovery</option>
-        <option value="https://electoralsearch.eci.gov.in/uesfmempmlkypo">Voter name check</option>
-        <option value="https://engagement-awc.odisha.gov.in/modifyawwEventListForOutsider.htm">anganawadi requirement</option>
-        
-        
-    </select>
+        <div class="card">
+            <label for="shortcutKeys">SHORTCUT KEYS</label>
+            <select id="shortcutKeys" onchange="goToLink(this)">
+                <option value="">-- Select a site --</option>
+                <option value="https://rdcisurada.github.io/keyboardsymbols/">Keyboard Symbols</option>
+                <option value="https://rdcisurada.github.io/windowsshortcut/">Windows Shortcut</option>
+                <option value="https://rdcisurada.github.io/excelshortcut/">Excel Shortcut</option>
+                <option value="https://rdcisurada.github.io/wordshortcut/">Word Shortcut</option>
+                <option value="https://rdcisurada.github.io/internet-shortcut-keys/">Internet Shortcut</option>
+                <option value="https://rdcisurada.github.io/tallyshortcut/">Tally Shortcut</option>
+                <option value="https://rdcisurada.github.io/shortname/">Full Form / Abbreviations</option>
+            </select>
+        </div>
 
-    
-    
-    
+        <div class="card">
+            <label for="excelData">EXCEL DATA</label>
+            <select id="excelData" onchange="goToLink(this)">
+                <option value="">-- Select a site --</option>
+                <option value="https://rdcisurada.github.io/excelformula/">Excel Formula</option>
+                <option value="https://rdcisurada.github.io/vlookupdata/">VLOOKUP Data</option>
+                <option value="https://rdcisurada.github.io/filterdata/">Filter Data</option>
+                <option value="https://rdcisurada.github.io/pivottabledata/">Pivot Table Data</option>
+                <option value="https://rdcisurada.github.io/convertdata/">Convert Data</option>
+                <option value="https://rdcisurada.github.io/countif-countifsdata/">COUNTIF(S) Data</option>
+                <option value="https://rdcisurada.github.io/sumif-sumifsdata/">SUMIF(S) Data</option>
+            </select>
+        </div>
 
+        <div class="card">
+            <label for="onlineWebsites">ONLINE WEBSITES</label>
+            <select id="onlineWebsites" onchange="goToLink(this)">
+                <option value="">-- Select a site --</option>
+                <option value="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en">Aadhar Download</option>
+                <option value="https://myaadhaar.uidai.gov.in/check-aadhaar-validity/en">Mobile Number Check in Aadhar</option>
+                <option value="https://tathya.uidai.gov.in/access/login?role=resident">Aadhar-Bank Link Status</option>
+                <option value="https://myaadhaar.uidai.gov.in/retrieve-eid-uid/en">Forgot Aadhar Number Recovery</option>
+                <option value="https://electoralsearch.eci.gov.in/uesfmempmlkypo">Voter Name Check</option>
+                <option value="https://engagement-awc.odisha.gov.in/modifyawwEventListForOutsider.htm">Anganwadi Recruitment</option>
+            </select>
+        </div>
+
+    </div>
 </body>
 </html>
